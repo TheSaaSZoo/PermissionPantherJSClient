@@ -329,14 +329,14 @@ export default class PermissionPanther {
   }
 
   /**
-   * Give all permissions defined within this group, if it exists
+   * Give all permissions defined within this group, if it exists. Returns a permission.
    */
   PermissionGroup(groupName: string): string {
     return `$${groupName}`
   }
 
   /**
-   * Inherit relationships from another permission on an object
+   * Inherit relationships from another permission on an object. Returns an entity.
    */
   Inherit(permission: string, object: string): string {
     return `~${object}#${permission}`
