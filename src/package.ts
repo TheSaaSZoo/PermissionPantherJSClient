@@ -16,7 +16,7 @@ export default class PermissionPanther {
     if (config?.endpoint) {
       this.target = config.endpoint
     } else {
-      this.target = 'https://api.permissionpanther.com'
+      this.target = 'api.permissionpanther.com'
     }
     if (config?.insecure === true) {
       this.client = new PermissionPantherClient(this.target, grpc.credentials.createInsecure())
